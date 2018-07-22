@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Insert Paper</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       
+        <style>
+            .main {
+                position:absolute;
+                left:50%;top:10%;
+                transform:translate(-50%,0%);
+                -ms-transform:translate(-50%,0%);
+            }
+
+            form {
+                margin-top: 50px;
+            }
+
+            p {
+                text-align: center;
+            }
+        </style>
+    
+</head>
+
+<body>
+    
+    <div style="float:left; margin: 20px;">
+            <a href = "admin_dashboard">
+                <button type="button" class="btn btn-primary">Back</button>
+            </a>
+    </div>
+    
+    <div class="mainn">
+        <div class="main col-xs-10 col-sm-7 col-md-4 col-lg-4"><br>
+            <h4>Insert New Conference Paper Information</h4>
+            <div class="tab-content">
+                
+            <div class=" tab-pane fade in active" id="login">
+
+                <form class="form-horizontal" method="post" action="insert">
+                  
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="title">Title:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <textarea class="form-control" id="title" name="title" placeholder="Enter Title" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="abstract">Abstract:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <textarea class="form-control" id="abstract" name="abstract" placeholder="Enter Abstract" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="pdf">PDF:</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <input type="file" class="form-control-file" id="pdffile">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-6">
+                        <button type="submit" name="insert" value="insertPaper" class="btn btn-primary">Insert</button>
+                        <a href = "insert_paper.html"><button type="button" class="btn btn-default">Reset</button></a>
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+
